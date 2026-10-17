@@ -1,0 +1,65 @@
+{
+  "name": "dsh-sysmon",
+  "version": "1.0.0",
+  "description": "Host CPU / memory rings under the DeepSeek Harness composer, with a one-minute trend panel on click.",
+  "type": "module",
+  "license": "MIT",
+  "author": "hehf21",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "sysmon",
+    "system-monitor",
+    "cpu",
+    "memory"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hehf21/dsh-sysmon.git"
+  },
+  "homepage": "https://github.com/hehf21/dsh-sysmon#readme",
+  "bugs": {
+    "url": "https://github.com/hehf21/dsh-sysmon/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "meta": {
+    "title": {
+      "en": "Machine monitor",
+      "zh": "机器状态"
+    },
+    "description": {
+      "en": "Shows host CPU and memory usage under the composer.",
+      "zh": "在对话框下方显示本机 CPU 与内存使用率。"
+    }
+  },
+  "icon": "./icon.svg"
+}

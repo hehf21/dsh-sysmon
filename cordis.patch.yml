@@ -1,0 +1,5 @@
+# dsh-sysmon bundle patch：一行宿主插件，负责采样与暴露 /sysmon/stats。
+# 行 id 决定浏览器半边的加载地址 /plugins/sysmon/client.js（见 dsh-client-modules）。
+- insert:
+    - id: sysmon
+      name: dsh-sysmon
